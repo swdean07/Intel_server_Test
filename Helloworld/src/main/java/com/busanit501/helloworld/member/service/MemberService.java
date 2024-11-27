@@ -65,8 +65,8 @@ public enum MemberService {
     public void update(MemberDTO memberDTO) throws SQLException {
 
         log.info("memberDTO : " + memberDTO);
-        MemberVO foodVO = modelMapper.map(memberDTO, MemberVO.class);
-        memberDAO.updateOne(foodVO);
+        MemberVO memberVO = modelMapper.map(memberDTO, MemberVO.class);
+        memberDAO.updateOne(memberVO);
 
     }
 
