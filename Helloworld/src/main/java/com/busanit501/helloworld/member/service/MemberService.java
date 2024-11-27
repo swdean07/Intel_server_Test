@@ -1,6 +1,9 @@
 package com.busanit501.helloworld.member.service;
 
+import com.busanit501.helloworld.food.dao.FoodDAO;
+import com.busanit501.helloworld.food.dto.FoodDTO;
 import com.busanit501.helloworld.food.vo.FoodVO;
+import com.busanit501.helloworld.jdbcex.dto.TodoDTO;
 import com.busanit501.helloworld.jdbcex.util.MapperUtil;
 import com.busanit501.helloworld.jdbcex.vo.TodoVO;
 import com.busanit501.helloworld.member.dao.MemberDAO;
@@ -32,7 +35,7 @@ public enum MemberService {
     // register
     public void register(MemberDTO memberDTO) throws SQLException {
         MemberVO memberVO = modelMapper.map(memberDTO, MemberVO.class);
-        log.info("foodVO : " + memberVO);
+        log.info("memberVO : " + memberVO);
         memberDAO.insert(memberVO);
     } // register
 
@@ -57,13 +60,13 @@ public enum MemberService {
         return memberDTO;
 
     }
+
     //4 수정 기능
     public void update(MemberDTO memberDTO) throws SQLException {
 
         log.info("memberDTO : " + memberDTO);
-        FoodVO foodVO = modelMapper.map(memberDTO, FoodVO.class);
-        TodoVO memberVO;
-        memberDAO.updateOne(memberVO);
+        MemberVO foodVO = modelMapper.map(memberDTO, MemberVO.class);
+        memberDAO.updateOne(foodVO);
 
     }
 
