@@ -11,10 +11,10 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>food 작업 중. fno 번호로 수정화면 역할. </h1>
-    <form action="/food/update?fno=${dto.fno}" method="post">
+    <h1>member 작업 중. member 번호로 수정화면 역할. </h1>
+    <form action="/member/update?mno=${dto.mno}" method="post">
     <div>
-        <input type="text" name="fno" value="${dto.fno}" readonly>
+        <input type="text" name="mno" value="${dto.mno}" readonly>
     </div>
     <div>
         <input type="text" name="title" value="${dto.title}" placeholder="제목 입력 해주세요." >
@@ -32,9 +32,9 @@
 </div>
     </form>
 
-<form action="/food/delete?fno=${dto.fno}" method="post">
+<form action="/member/delete?mno=${dto.mno}" method="post">
     <button type="submit">삭제하기</button>
 </form>
-    <a href="/food/list">목록가기</a>
+    <a href="/member/list">목록가기</a>
 </body>
 </html>
