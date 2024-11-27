@@ -47,7 +47,7 @@ public class MemberServiceTest {
     @Test
     public void testSelectOne() throws SQLException {
         val memberDTO = memberService.get(14L);
-        log.info("하나 조회. todoDTO " + memberDTO);
+        log.info("하나 조회. memberDTO " + memberDTO);
     }
 
     // 하나수정,
