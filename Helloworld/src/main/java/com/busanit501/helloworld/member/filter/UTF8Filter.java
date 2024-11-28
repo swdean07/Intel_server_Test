@@ -24,4 +24,3 @@ public class UTF8Filter implements Filter {
         filterChain.doFilter(servletRequest, servletResponse);
     }
 }
-

@@ -1,6 +1,5 @@
 package com.busanit501.helloworld.member.filter;
 
-import com.busanit501.helloworld.member.dto.MemberDTO;
 import lombok.extern.log4j.Log4j2;
 
 import javax.servlet.*;
@@ -14,13 +13,13 @@ import java.io.IOException;
 // 한글로 입력된 내용을, UTF8로 변환해서 보내기.
 // 필터, 서버에 작업을 실행하기전에, 먼저 검사한다.
 // 유효성 체크.
-@WebFilter(urlPatterns = {"/member/*"})
+@WebFilter(urlPatterns = {"/todo/*"})
 @Log4j2
 public class LoginFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        log.info("doFilter ,/member/* 하위로 들어오는 모든 url 에 대해서 로그인 체크함");
+        log.info("doFilter ,/todo/* 하위로 들어오는 모든 url 에 대해서 로그인 체크함");
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
 
@@ -46,13 +45,9 @@ public class LoginFilter implements Filter {
         //임시로, 최초도 아니고, 로그인 처리가 되었다면, 그러면,
         // 정상적으로 접근하는 페이지로 이동 시켜 줄게.
         if(session.getAttribute("loginInfo") != null) {
-            // 앞에서 임시로 테스트 할 때, mid+mpw 붙여서 확인.
-//            String result  = (String) session.getAttribute("loginInfo");
-            com.busanit501.helloworld.member.dto.MemberDTO memberDTO  = (MemberDTO) session.getAttribute("loginInfo");
-            log.info("session.getAttribute(\"loginInfo\") memberDTO : " + memberDTO);
+            String result  = (String) session.getAttribute("loginInfo");
+            log.info("session.getAttribute(\"loginInfo\") result : " + result);
         }
         filterChain.doFilter(servletRequest, servletResponse);
     }
 }
-
-
