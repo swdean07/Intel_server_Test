@@ -1,6 +1,6 @@
 package com.busanit501.helloworld.member.service;
 
-import com.busanit501.helloworld.jdbcex.util.MapperUtil;
+import com.busanit501.helloworld.member.util.MapperUtil;
 import com.busanit501.helloworld.member.dao.MemberDAO;
 import com.busanit501.helloworld.member.dto.MemberDTO;
 import com.busanit501.helloworld.member.vo.MemberVO;

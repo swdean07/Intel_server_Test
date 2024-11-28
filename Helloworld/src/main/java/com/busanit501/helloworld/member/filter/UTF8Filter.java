@@ -1,6 +1,5 @@
 package com.busanit501.helloworld.member.filter;
 
-import com.busanit501.helloworld.member.dto.MemberDTO;
 import lombok.extern.log4j.Log4j2;
 
 import javax.servlet.*;

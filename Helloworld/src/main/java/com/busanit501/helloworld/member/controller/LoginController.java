@@ -26,7 +26,7 @@ public class LoginController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        log.info("LoginController doPost ");
+        log.info("LoginController doPost 확인용");
         String mid = request.getParameter("mid");
         String mpw = request.getParameter("mpw");
         // auto, 자동로그인 체크 여부, -> 결과 문자열 : "on"
@@ -44,7 +44,9 @@ public class LoginController extends HttpServlet {
         // 조금있다 할 예정.
         // 임의로 세션 동작 여부만 확인중.
         try {
+            log.info("LoginController doPost 로그인 전");
             MemberDTO memberDTO = MemberService.INSTANCE.login(mid, mpw);
+            log.info("LoginController doPost 로그인 후");
             // 세션에, 위의 로그인 정보를 저장,
             HttpSession session = request.getSession();
             session.setAttribute("loginInfo", memberDTO);
