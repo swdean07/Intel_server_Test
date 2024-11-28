@@ -66,7 +66,7 @@ public class MemberUpdateController extends HttpServlet {
         }
 
         System.out.println("doPost : 글쓰기 처리하는 로직, 디비 연결 전, 리스트로 이동함");
-        response.sendRedirect("/food/list");
+        response.sendRedirect("/member/list");
 
     }
 }

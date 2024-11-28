@@ -14,13 +14,13 @@ import java.io.IOException;
 // 한글로 입력된 내용을, UTF8로 변환해서 보내기.
 // 필터, 서버에 작업을 실행하기전에, 먼저 검사한다.
 // 유효성 체크.
-@WebFilter(urlPatterns = {"/todo/*"})
+@WebFilter(urlPatterns = {"/member/*"})
 @Log4j2
 public class LoginFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        log.info("doFilter ,/todo/* 하위로 들어오는 모든 url 에 대해서 로그인 체크함");
+        log.info("doFilter ,/member/* 하위로 들어오는 모든 url 에 대해서 로그인 체크함");
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
 

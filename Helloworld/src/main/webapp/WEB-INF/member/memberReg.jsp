@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>member 미니실습 - member의 글쓰기 폼 화면</h1>
+<h1>member 미니실습 - member의 글쓰기 폼 화면</h1>
 <form action="/member/register" method="post">
     <div>
         <input type="text" name="title" placeholder="제목 입력 해주세요.">
@@ -24,3 +24,5 @@
 </form>
 </body>
 </html>
+
+

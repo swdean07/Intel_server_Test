@@ -35,4 +35,15 @@ public class MemberDAOTest {
 
     }
 
+    //uuid 로 유저 검색
+    @Test
+    public void getMemberWithUuidTest() throws SQLException {
+
+        // 각자 테이블의 유저의uuid를 직접 복사해서 붙여넣기.
+        // 각각 전부 다 달라요.
+        MemberVO memberVO = memberDAO.getMemberWithUuid("b75fa697-fe58-4fa4-ac01-db31fe05a238");
+        log.info("memberVO : " + memberVO);
+
+    }
+
 }
