@@ -1,7 +1,5 @@
 package com.busanit501.helloworld.member.controller;
 
-import com.busanit501.helloworld.food.dto.FoodDTO;
-import com.busanit501.helloworld.food.service.FoodService;
 import com.busanit501.helloworld.member.dto.MemberDTO;
 import com.busanit501.helloworld.member.service.MemberService;
 import lombok.extern.log4j.Log4j2;
@@ -45,24 +43,14 @@ public class MemberUpdateController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String finished = request.getParameter("finished");
-        log.info("finished : " + finished);
-
-        boolean checkFinished = false;
-
-        if(finished.equals("on")){
-            checkFinished = true;
-        }
         MemberDTO memberDTO = MemberDTO.builder()
-                .mno(Long.valueOf(request.getParameter("mno")))
-                .title(request.getParameter("title"))
-                .dueDate(LocalDate.parse(request.getParameter("dueDate"),DATE_TIME_FORMATTER))
-                .finished(checkFinished)
+                .mid(request.getParameter("mid"))
+                .mpw(String.valueOf(LocalDate.parse(request.getParameter("mpw"))))
+                .mname(String.valueOf(LocalDate.parse(request.getParameter("mname"))))
                 .build();
-        log.info("memberDTO 수정된 내용: " + memberDTO);
         // Controller -> Service
         try {
-            memberService.update(memberDTO);
+            memberService.register(memberDTO);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

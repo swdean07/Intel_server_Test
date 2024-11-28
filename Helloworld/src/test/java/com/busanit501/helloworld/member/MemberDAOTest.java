@@ -7,8 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.sql.SQLException;
-import java.time.LocalDate;
-import java.util.List;
+import java.util.UUID;
 
 @Log4j2
 public class MemberDAOTest {
@@ -20,54 +19,20 @@ public class MemberDAOTest {
         memberDAO = new MemberDAO();
     }
 
-
     @Test
-    public void insetTest() throws Exception {
-        MemberVO memberVO = MemberVO.builder()
-                .title("샘플 데이터 추가1234")
-                .dueDate(LocalDate.now())
-                .finished(false)
-                .build();
-
-        memberDAO.insert(memberVO);
+    public void getMemberWithMpwTest() throws SQLException {
+        String mid = "swh";
+        String mpw = "1234";
+        MemberVO memberVO = memberDAO.getMemberWithMpw(mid,mpw);
+        log.info("memberVO 조회 확인: " +memberVO );
     }
 
-    //2, 전체 목록 조회 테스트
     @Test
-    public void testList() throws SQLException {
-        List<MemberVO> list = memberDAO.selectAll();
-        list.forEach(vo -> System.out.println(vo));
-    }
+    public void updateUuidTest() throws SQLException {
+        String uuid = UUID.randomUUID().toString();
+        log.info("uuid 랜덤 문자열 샘플 : " + uuid);
+        memberDAO.updateUuid("lsy",uuid);
 
-    //3, 하나 조회 테스트
-    @Test
-    public void getOneTest() throws SQLException {
-        Long mno = 5L;
-        MemberVO memberVO = memberDAO.selectOne(mno);
-        log.info(memberVO);
-    }
-
-    // 4, 수정 테스트
-    @Test
-    public void updateTest() throws SQLException {
-        // 실제 작업은 내용을 화면에서 받아오는 대신,
-        // 하드 코딩으로 값을 더미로 테스트.
-        MemberVO memberVO = MemberVO.builder()
-                .mno(3L)
-                .title("수정 테스트 중")
-                .finished(true)
-                .dueDate(LocalDate.of(2024, 11, 27))
-                .build();
-
-        memberDAO.updateOne(memberVO);
-
-    }
-
-    // 5, 삭제 테스트
-    @Test
-    public void deleteTest() throws SQLException {
-        Long mno = 3L;
-        memberDAO.deleteMember(mno);
     }
 
 }

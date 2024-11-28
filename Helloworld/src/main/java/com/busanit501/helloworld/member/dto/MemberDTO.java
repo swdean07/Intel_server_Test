@@ -5,16 +5,13 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
-
-@Data //get,set,toString,hashCode, equals
+@Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class MemberDTO {
-    private Long mno;
-    private String title;
-    private LocalDate dueDate;
-    private boolean finished;
-
+    private String mid;
+    private String mpw;
+    private String mname;
+    private String uuid;
 }

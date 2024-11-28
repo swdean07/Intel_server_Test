@@ -1,26 +1,18 @@
 package com.busanit501.helloworld.member.vo;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-import java.time.LocalDate;
+// @Data // getter/setter/tostring/hashcode/equals
+//VO 에서는 가급적  setter 보다, getter위주로 작업을 함, 불변성 유지 하기위해서.
 
-//롬복 사용하기.
-//@Getter
-//@Setter
-//@ToString
-// VO(Value Object)
-// 사용 용도, 직접적인 데이터베이스에 반영하는 클래스
-@Data
+@Getter
+@ToString
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-
+@NoArgsConstructor
 public class MemberVO {
-    private Long mno;
-    private String title;
-    private LocalDate dueDate;
-    private boolean finished;
+    private String mid;
+    private String mpw;
+    private String mname;
+    private String uuid;
 }

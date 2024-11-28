@@ -34,8 +34,9 @@ public class MemberRegController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         MemberDTO memberDTO = MemberDTO.builder()
-                .title(request.getParameter("title"))
-                .dueDate(LocalDate.parse(request.getParameter("dueDate"),DATE_TIME_FORMATTER))
+                .mid(request.getParameter("mid"))
+                .mpw(String.valueOf(LocalDate.parse(request.getParameter("mpw"))))
+                .mname(String.valueOf(LocalDate.parse(request.getParameter("mname"))))
                 .build();
         // Controller -> Service
         try {
