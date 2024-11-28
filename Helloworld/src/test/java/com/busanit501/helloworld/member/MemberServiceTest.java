@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.sql.SQLException;
+import java.util.UUID;
 
 @Log4j2
 public class MemberServiceTest {
@@ -23,6 +24,23 @@ public class MemberServiceTest {
      MemberDTO memberDTO = memberService.login("swh", "1234");
      log.info("MemberService loginTest : " + memberDTO.toString());
     }
+
+    // uuid 업데이트
+    @Test
+    public void updateUuidTest() throws SQLException {
+        String uuid = UUID.randomUUID().toString();
+        memberService.updateUuid("swh2",uuid);
+    }
+
+    // uuid 이용해서 검색해보기.
+    @Test
+    public void getMemberWithUuidSearch() throws SQLException {
+        // 각자 테이블의 유저의uuid를 직접 복사해서 붙여넣기.
+        // 각각 전부 다 달라요.
+        MemberDTO memberDTO = memberService.getMemberWithUuidService("fc59b9b2-78d6-44f7-98c5-1778e7b3ad16");
+        log.info("memberDTO : " + memberDTO);
+    }
+
 
 
 }

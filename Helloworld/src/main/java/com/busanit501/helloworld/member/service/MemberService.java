@@ -1,8 +1,10 @@
 package com.busanit501.helloworld.member.service;
 
-import com.busanit501.helloworld.member.util.MapperUtil;
+import com.busanit501.helloworld.jdbcex.dto.TodoDTO;
+import com.busanit501.helloworld.jdbcex.vo.TodoVO;
 import com.busanit501.helloworld.member.dao.MemberDAO;
 import com.busanit501.helloworld.member.dto.MemberDTO;
+import com.busanit501.helloworld.member.util.MapperUtil;
 import com.busanit501.helloworld.member.vo.MemberVO;
 import lombok.extern.log4j.Log4j2;
 import org.modelmapper.ModelMapper;
@@ -27,7 +29,17 @@ public enum MemberService {
 
     // 로그인 확인용.
     public MemberDTO login(String mid, String mpw) throws SQLException {
-        MemberVO memberVO = memberDAO.getMemberWithMpw(mid,mpw);
+      MemberVO memberVO = memberDAO.getMemberWithMpw(mid,mpw);
+      MemberDTO memberDTO = modelMapper.map(memberVO, MemberDTO.class);
+      return memberDTO;
+    }
+
+    public void updateUuid(String mid, String uuid) throws SQLException {
+        memberDAO.updateUuid(mid,uuid);
+    }
+
+    public MemberDTO getMemberWithUuidService(String uuid) throws SQLException {
+        MemberVO memberVO= memberDAO.getMemberWithUuid(uuid);
         MemberDTO memberDTO = modelMapper.map(memberVO, MemberDTO.class);
         return memberDTO;
     }
@@ -83,10 +95,10 @@ public enum MemberService {
 
     //3
     // 하나 조회, 상세보기.
-    public MemberDTO get(Long mid) throws SQLException {
-        log.info("mid : " + mid);
+    public MemberDTO get(Long mno) throws SQLException {
+        log.info("mno : " + mno);
         ///  디비에서 하나 조회 결과 받았음.
-        MemberVO memberVO = memberDAO.selectOne(mid);
+        MemberVO memberVO = memberDAO.selectOne(mno);
         // VO -> DTO 변환 작업.
         MemberDTO memberDTO = modelMapper.map(memberVO,MemberDTO.class);
         return memberDTO;
@@ -105,9 +117,14 @@ public enum MemberService {
     }
 
     //5 삭제 기능.
-    public void delete(Long mid) throws SQLException {
-        memberDAO.deleteMember(mid);
+    public void delete(Long mno) throws SQLException {
+        memberDAO.deleteMember(mno);
     }
 
 }
+
+
+
+
+
 

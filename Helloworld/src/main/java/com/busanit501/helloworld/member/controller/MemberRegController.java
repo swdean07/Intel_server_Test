@@ -35,8 +35,7 @@ public class MemberRegController extends HttpServlet {
 
         MemberDTO memberDTO = MemberDTO.builder()
                 .mid(request.getParameter("mid"))
-                .mpw(String.valueOf(LocalDate.parse(request.getParameter("mpw"))))
-                .mname(String.valueOf(LocalDate.parse(request.getParameter("mname"))))
+                .mpw(request.getParameter("mpw"))
                 .build();
         // Controller -> Service
         try {

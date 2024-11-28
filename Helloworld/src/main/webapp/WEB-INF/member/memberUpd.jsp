@@ -11,8 +11,8 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>member 작업 중. member 번호로 수정화면 역할. </h1>
-    <form action="/member/update?mno=${dto.mno}" method="post">
+<h1>member 작업 중. mno 번호로 수정화면 역할. </h1>
+<form action="/member/update?mno=${dto.mno}" method="post">
     <div>
         <input type="text" name="mno" value="${dto.mno}" readonly>
     </div>
@@ -25,16 +25,17 @@
     <div>
         <input type="checkbox" name="finished" ${dto.finished ? "checked" : ""} >
     </div>
-<div>
-    <button type="submit">수정하기</button>
+    <div>
+        <button type="submit">수정하기</button>
 
 
-</div>
-    </form>
+    </div>
+</form>
 
 <form action="/member/delete?mno=${dto.mno}" method="post">
     <button type="submit">삭제하기</button>
 </form>
-    <a href="/member/list">목록가기</a>
+<a href="/member/list">목록가기</a>
 </body>
 </html>
+

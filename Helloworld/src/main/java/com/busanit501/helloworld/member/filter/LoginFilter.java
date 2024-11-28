@@ -1,6 +1,5 @@
 package com.busanit501.helloworld.member.filter;
 
-import com.busanit501.helloworld.member.dto.MemberDTO;
 import lombok.extern.log4j.Log4j2;
 
 import javax.servlet.*;
@@ -46,10 +45,8 @@ public class LoginFilter implements Filter {
         //임시로, 최초도 아니고, 로그인 처리가 되었다면, 그러면,
         // 정상적으로 접근하는 페이지로 이동 시켜 줄게.
         if(session.getAttribute("loginInfo") != null) {
-            // 앞에서 임시로 테스트 할 때, mid+mpw 붙여서 확인.
-//            String result  = (String) session.getAttribute("loginInfo");
-            MemberDTO memberDTO  = (MemberDTO) session.getAttribute("loginInfo");
-            log.info("session.getAttribute(\"loginInfo\") memberDTO : " + memberDTO);
+            String result  = (String) session.getAttribute("loginInfo");
+            log.info("session.getAttribute(\"loginInfo\") result : " + result);
         }
         filterChain.doFilter(servletRequest, servletResponse);
     }

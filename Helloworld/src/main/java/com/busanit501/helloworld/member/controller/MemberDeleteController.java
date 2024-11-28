@@ -21,7 +21,7 @@ public class MemberDeleteController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Long mno = Long.valueOf(request.getParameter("mno"));
         //
-        log.info("doPost TodoDeleteController 확인");
+        log.info("doPost MemberDeleteController 확인");
         try {
            memberService.delete(mno);
 
