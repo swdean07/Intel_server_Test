@@ -35,8 +35,7 @@ public class MemberRegController extends HttpServlet {
 
         MemberDTO memberDTO = MemberDTO.builder()
                 .mid(request.getParameter("mid"))
-                .mpw(String.valueOf(LocalDate.parse(request.getParameter("mpw"))))
-                .mname(String.valueOf(LocalDate.parse(request.getParameter("mname"))))
+                .mpw(request.getParameter("mpw"))
                 .build();
         // Controller -> Service
         try {
@@ -46,7 +45,7 @@ public class MemberRegController extends HttpServlet {
         }
 
         System.out.println("doPost : 글쓰기 처리하는 로직, 디비 연결 전, 리스트로 이동함");
-        response.sendRedirect("/member/list");
+        response.sendRedirect("/food/list");
 
     }
 }

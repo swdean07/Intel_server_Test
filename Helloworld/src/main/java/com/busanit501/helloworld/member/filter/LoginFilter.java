@@ -48,9 +48,11 @@ public class LoginFilter implements Filter {
         if(session.getAttribute("loginInfo") != null) {
             // 앞에서 임시로 테스트 할 때, mid+mpw 붙여서 확인.
 //            String result  = (String) session.getAttribute("loginInfo");
-            MemberDTO memberDTO  = (MemberDTO) session.getAttribute("loginInfo");
+            com.busanit501.helloworld.member.dto.MemberDTO memberDTO  = (MemberDTO) session.getAttribute("loginInfo");
             log.info("session.getAttribute(\"loginInfo\") memberDTO : " + memberDTO);
         }
         filterChain.doFilter(servletRequest, servletResponse);
     }
 }
+
+

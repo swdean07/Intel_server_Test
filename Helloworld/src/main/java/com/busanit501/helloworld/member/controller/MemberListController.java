@@ -19,7 +19,7 @@ public class MemberListController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        System.out.println("doGet : FoodListController 한글 테스트");
+        System.out.println("doGet : MemberListController 한글 테스트");
         List<MemberDTO> memberList = null;
         try {
             memberList = MemberService.INSTANCE.listAll();
@@ -32,4 +32,3 @@ public class MemberListController extends HttpServlet {
 
     }
 }
-

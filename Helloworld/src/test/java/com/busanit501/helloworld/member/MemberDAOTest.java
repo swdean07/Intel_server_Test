@@ -31,7 +31,7 @@ public class MemberDAOTest {
     public void updateUuidTest() throws SQLException {
         String uuid = UUID.randomUUID().toString();
         log.info("uuid 랜덤 문자열 샘플 : " + uuid);
-        memberDAO.updateUuid("lsy",uuid);
+        memberDAO.updateUuid("swh",uuid);
 
     }
 

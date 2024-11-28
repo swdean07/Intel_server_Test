@@ -28,7 +28,7 @@ public class MemberReadController extends HttpServlet {
             MemberDTO memberDTO = MemberService.INSTANCE.get(mno);
             // 화면에 전달하기.
             request.setAttribute("dto", memberDTO);
-            request.getRequestDispatcher("/WEB-INF/member/memberRead.jsp")
+            request.getRequestDispatcher("/WEB-INF/member/foodRead.jsp")
                     .forward(request, response);
 
         } catch (SQLException e) {

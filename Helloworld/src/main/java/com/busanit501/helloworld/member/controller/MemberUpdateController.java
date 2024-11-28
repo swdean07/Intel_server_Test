@@ -43,20 +43,30 @@ public class MemberUpdateController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        String finished = request.getParameter("finished");
+        log.info("finished : " + finished);
+
+        boolean checkFinished = false;
+
+        if(finished.equals("on")){
+            checkFinished = true;
+        }
         MemberDTO memberDTO = MemberDTO.builder()
-                .mid(request.getParameter("mid"))
-                .mpw(String.valueOf(LocalDate.parse(request.getParameter("mpw"))))
-                .mname(String.valueOf(LocalDate.parse(request.getParameter("mname"))))
+                .mid(String.valueOf(Long.valueOf(request.getParameter("mid"))))
+                .mid(String.valueOf(Long.valueOf(request.getParameter("mpw"))))
+                .mid(String.valueOf(Long.valueOf(request.getParameter("mname"))))
+                .mid(String.valueOf(Long.valueOf(request.getParameter("uuid"))))
                 .build();
+        log.info("memberDTO 수정된 내용: " + memberDTO);
         // Controller -> Service
         try {
-            memberService.register(memberDTO);
+            memberService.update(memberDTO);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
         System.out.println("doPost : 글쓰기 처리하는 로직, 디비 연결 전, 리스트로 이동함");
-        response.sendRedirect("/member/list");
+        response.sendRedirect("/food/list");
 
     }
 }
