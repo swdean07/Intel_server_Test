@@ -91,8 +91,8 @@ public enum TodoService {
         ///  디비에서 하나 조회 결과 받았음.
         TodoVO todoVO = todoDAO.selectOne(tno);
         // VO -> DTO 변환 작업.
-         TodoDTO todoDTO = modelMapper.map(todoVO,TodoDTO.class);
-         return todoDTO;
+        TodoDTO todoDTO = modelMapper.map(todoVO,TodoDTO.class);
+        return todoDTO;
 
     }
 
@@ -102,8 +102,8 @@ public enum TodoService {
         // DAO 계층에서 박스의 타입 TodoVO 사용하니, 변환 작업 필요함.
         // 항상 데이터가 전달 유무 확인.
         log.info("todoDTO : " + todoDTO);
-         TodoVO todoVO = modelMapper.map(todoDTO, TodoVO.class);
-         todoDAO.updateOne(todoVO);
+        TodoVO todoVO = modelMapper.map(todoDTO, TodoVO.class);
+        todoDAO.updateOne(todoVO);
 
     }
 

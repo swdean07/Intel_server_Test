@@ -34,7 +34,7 @@ public class FoodUpdateController extends HttpServlet {
             FoodDTO foodDTO = foodService.get(fno);
             // 화면에 전달하기.
             request.setAttribute("dto", foodDTO);
-            request.getRequestDispatcher("/WEB-INF/food/memberUpd.jsp")
+            request.getRequestDispatcher("/WEB-INF/food/foodUpd.jsp")
                     .forward(request, response);
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -68,7 +68,7 @@ public class FoodUpdateController extends HttpServlet {
         }
 
         System.out.println("doPost : 글쓰기 처리하는 로직, 디비 연결 전, 리스트로 이동함");
-        response.sendRedirect("/food/list");
+        response.sendRedirect("/food/list2");
 
     }
 }

@@ -13,7 +13,7 @@
 <body>
 <h1>미니실습 작업 중. mno 번호로 하나 조회하는 화면, 상세보기와 같은 역할. </h1>
 <div>
-    <input type="text" name="mno" value="${dto.mno}" readonly>
+    <input type="text" name="tno" value="${dto.tno}" readonly>
 </div>
 <div>
     <input type="text" name="title" value="${dto.title}" placeholder="제목 입력 해주세요." readonly>
@@ -25,8 +25,8 @@
     <input type="checkbox" name="finished" ${dto.finished ? "checked" : ""} readonly>
 </div>
 <div>
-    <a href="/member/update?mno=${dto.mno}">수정/삭제</a>
-    <a href="/member/list">목록가기</a>
+    <a href="/todo/update?mno=${dto.tno}">수정/삭제</a>
+    <a href="/todo/list">목록가기</a>
 </div>
 </body>
 </html>

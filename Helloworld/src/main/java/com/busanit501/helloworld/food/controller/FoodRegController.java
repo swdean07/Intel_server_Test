@@ -26,7 +26,7 @@ public class FoodRegController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //화면 전달.
-        request.getRequestDispatcher("/WEB-INF/food/memberReg.jsp")
+        request.getRequestDispatcher("/WEB-INF/food/foodReg.jsp")
                 .forward(request, response);
     }
 
@@ -47,7 +47,7 @@ public class FoodRegController extends HttpServlet {
         }
 
         System.out.println("doPost : 글쓰기 처리하는 로직, 디비 연결 전, 리스트로 이동함");
-        response.sendRedirect("/food/list");
+        response.sendRedirect("/food/list2");
 
     }
 }

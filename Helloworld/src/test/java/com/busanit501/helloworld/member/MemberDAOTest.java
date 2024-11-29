@@ -41,7 +41,7 @@ public class MemberDAOTest {
 
         // 각자 테이블의 유저의uuid를 직접 복사해서 붙여넣기.
         // 각각 전부 다 달라요.
-        MemberVO memberVO = memberDAO.getMemberWithUuid("b75fa697-fe58-4fa4-ac01-db31fe05a238");
+        MemberVO memberVO = memberDAO.getMemberWithUuid("99df8683-2c3e-4c39-a0aa-a21a8f10ad73");
         log.info("memberVO : " + memberVO);
 
     }

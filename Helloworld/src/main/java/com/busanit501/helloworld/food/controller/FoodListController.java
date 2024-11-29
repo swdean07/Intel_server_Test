@@ -25,7 +25,7 @@ public class FoodListController extends HttpServlet {
         try {
             foodList = FoodService.INSTANCE.listAll();
             request.setAttribute("list", foodList);
-            request.getRequestDispatcher("/WEB-INF/food/memberList.jsp")
+            request.getRequestDispatcher("/WEB-INF/food/foodList.jsp")
                     .forward(request, response);
         } catch (SQLException e) {
             throw new RuntimeException(e);

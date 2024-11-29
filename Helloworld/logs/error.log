@@ -1,0 +1,1 @@
+12:49:41.392 [Test worker] ERROR com.busanit501.helloworld.food.FoodServiceTest-SQLException during updateUuidTest: (conn=163) Unknown column 'uuid' in 'field list'

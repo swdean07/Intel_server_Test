@@ -3,15 +3,18 @@ package com.busanit501.helloworld.food.service;
 import com.busanit501.helloworld.food.dao.FoodDAO;
 import com.busanit501.helloworld.food.dto.FoodDTO;
 import com.busanit501.helloworld.food.vo.FoodVO;
-import com.busanit501.helloworld.jdbcex.dto.TodoDTO;
+import com.busanit501.helloworld.jdbcex.dto.MemberDTO;
 import com.busanit501.helloworld.jdbcex.util.MapperUtil;
-import com.busanit501.helloworld.jdbcex.vo.TodoVO;
+import com.busanit501.helloworld.jdbcex.vo.MemberVO;
 import lombok.extern.log4j.Log4j2;
 import org.modelmapper.ModelMapper;
 
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import static jdk.javadoc.internal.doclets.formats.html.markup.HtmlStyle.title;
 
 
 //열거형 상수들,
@@ -26,6 +29,36 @@ public enum FoodService {
     FoodService() {
         foodDAO = new FoodDAO();
         modelMapper = MapperUtil.INSTANCE.get();
+    }
+
+    // 로그인 확인용.
+    public FoodDTO login(Long fno, String title, LocalDate dueDate,
+                         String uuid, Boolean finished) throws SQLException {
+
+        FoodVO foodVO = foodDAO.getFoodWithFno(fno, title, dueDate, uuid, finished);
+
+        if (foodVO == null) {
+            log.warn("No food data found for the provided parameters.");
+            return null;
+        }
+
+        FoodDTO foodDTO = modelMapper.map(foodVO, FoodDTO.class);
+        return foodDTO;
+    }
+
+    public void updateUuid(Long fno, String title, LocalDate dueDate,
+                           String uuid, Boolean finished) throws SQLException {
+        foodDAO.updateUuid(fno, title, dueDate,uuid,finished);
+    }
+
+    public FoodDTO getFoodWithUuidService(String uuid) throws SQLException {
+        FoodVO foodVO = foodDAO.getFoodWithUuid(uuid);
+        if (foodVO == null) {
+            log.warn("No food data found for the provided UUID: " + uuid);
+            return null;  // 또는 적절한 기본값을 반환
+        }
+        FoodDTO foodDTO = modelMapper.map(foodVO, FoodDTO.class);
+        return foodDTO;
     }
 
     //1

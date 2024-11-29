@@ -1,6 +1,5 @@
 package com.busanit501.helloworld.jdbcex.controller;
 
-import com.busanit501.helloworld.jdbcex.dto.TodoDTO;
 import com.busanit501.helloworld.jdbcex.service.TodoService;
 import lombok.extern.log4j.Log4j2;
 
@@ -11,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.List;
 
 @Log4j2 // log.info("이런 형식으로 출력 한다.")
 @WebServlet(name = "TodoDeleteController", urlPatterns = "/todo/delete")

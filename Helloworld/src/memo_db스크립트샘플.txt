@@ -13,3 +13,18 @@ insert into tbl_todo (title, dueDate) values ('점심 뭐 먹지?국밥',now());
 select * from tbl_todo;
 commit;
 flush privileges ;
+
+
+로그인 테스트 용  테이블
+create table tbl_member (
+                           mid varchar(50) primary key,
+                           mpw varchar(50) not null,
+                           mname varchar(100) not null
+);
+
+insert into tbl_member ( mid, mpw, mname) values ('lsy','1234','이상용1');
+insert into tbl_member ( mid, mpw, mname) values ('lsy2','1234','이상용2');
+
+select * from tbl_member;
+
+alter table tbl_member add column uuid varchar(50);

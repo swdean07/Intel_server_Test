@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--    여기에 설정하는 것은 , 시스템 전역에 설정을 하는 것이라서, -->
+    <!--    어느 파일에서든 호출 가능함.-->
+
+    <!--    낱개로 빈즈들을 등록 했다면-->
+
+    <!--    <bean class="com.busanit501.springex.sample.SampleDAO"></bean>-->
+    <!--    <bean class="com.busanit501.springex.sample.SampleService"></bean>-->
+
+    <!--    통으로 패키지 등록하기. -->
+    <context:component-scan base-package="com.busanit501.springex.sample"/>
+
+
+</beans>

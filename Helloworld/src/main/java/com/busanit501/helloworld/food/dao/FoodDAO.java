@@ -1,15 +1,89 @@
 package com.busanit501.helloworld.food.dao;
 
 import com.busanit501.helloworld.food.vo.FoodVO;
-import com.busanit501.helloworld.jdbcex.dao.ConnectionUtil;
-import com.busanit501.helloworld.jdbcex.vo.TodoVO;
 import lombok.Cleanup;
 
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FoodDAO {
+public class FoodDAO<dueDate, finished> {
+    // 화면으로부터 전달받은 ,
+    // String mid, String mpw
+    // 예시 ) mid: lsy, mpw: 1234
+    public FoodVO getFoodWithFno(Long fno, String title, LocalDate dueDate, String uuid, Boolean finished) throws SQLException {
+        String query = "SELECT * FROM tbl_food WHERE fno=? AND title=? AND dueDate=? AND uuid=? AND finished=?";
+
+        FoodVO foodVO = null;
+
+        @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
+        @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(query);
+
+        preparedStatement.setLong(1, fno);
+        preparedStatement.setString(2, title);
+        preparedStatement.setDate(3, Date.valueOf(dueDate));
+        preparedStatement.setString(4, uuid);
+        preparedStatement.setBoolean(5, finished);
+
+        @Cleanup ResultSet resultSet = preparedStatement.executeQuery();
+
+        if (resultSet.next()) {
+            foodVO = FoodVO.builder()
+                    .fno(resultSet.getLong("fno"))
+                    .title(resultSet.getString("title"))
+                    .dueDate(resultSet.getDate("dueDate").toLocalDate())
+                    .uuid(resultSet.getString("uuid"))
+                    .finished(resultSet.getBoolean("finished"))
+                    .build();
+        }
+
+        return foodVO;
+    }
+
+    public void updateUuid(Long fno, String title, LocalDate dueDate, String uuid, Boolean finished) throws SQLException {
+        // UPDATE 쿼리에서 조건을 잘못 작성했기 때문에 SET으로 수정
+        String query = "UPDATE tbl_food SET title=?, dueDate=?, uuid=?, finished=? WHERE fno=?";
+
+        @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
+        @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(query);
+
+        // PreparedStatement에 올바른 매개변수 설정
+        preparedStatement.setString(1, title);
+        preparedStatement.setDate(2, Date.valueOf(dueDate));
+        preparedStatement.setString(3, uuid);
+        preparedStatement.setBoolean(4, finished);
+        preparedStatement.setLong(5, fno);
+
+        // 쿼리 실행
+        preparedStatement.executeUpdate();
+    }
+
+    public FoodVO getFoodWithUuid(String uuid) throws SQLException {
+        String query = "SELECT * FROM tbl_food WHERE uuid=?";
+
+        // 결과 데이터를 담을 FoodVO 객체 생성
+        FoodVO foodVO = null;
+
+        @Cleanup Connection connection = ConnectionUtil.INSTANCE.getConnection();
+        @Cleanup PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setString(1, uuid);
+
+        @Cleanup ResultSet resultSet = preparedStatement.executeQuery();
+
+        // 결과가 있는지 확인
+        if (resultSet.next()) {
+            foodVO = FoodVO.builder()
+                    .fno(resultSet.getLong("fno"))
+                    .title(resultSet.getString("title"))
+                    .dueDate(resultSet.getDate("dueDate").toLocalDate())
+                    .uuid(resultSet.getString("uuid"))
+                    .finished(resultSet.getBoolean("finished"))
+                    .build();
+        }
+
+        return foodVO;
+    }
 
     public void insert(FoodVO foodVO) throws SQLException {
 
@@ -73,8 +147,8 @@ public class FoodDAO {
 
         preparedStatement.setString(1, foodVO.getTitle());
         preparedStatement.setDate(2, Date.valueOf(foodVO.getDueDate()));
-        preparedStatement.setBoolean(3,foodVO.isFinished());
-        preparedStatement.setLong(4,foodVO.getFno());
+        preparedStatement.setBoolean(3, foodVO.isFinished());
+        preparedStatement.setLong(4, foodVO.getFno());
         preparedStatement.executeUpdate();
 
     }
@@ -88,8 +162,5 @@ public class FoodDAO {
         preparedStatement.setLong(1, fno);
         preparedStatement.executeUpdate();
     }
-
-
-
-} //class
+}
 

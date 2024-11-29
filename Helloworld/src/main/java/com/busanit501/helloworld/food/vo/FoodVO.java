@@ -19,5 +19,6 @@ public class FoodVO {
     private Long fno;
     private String title;
     private LocalDate dueDate;
+    private String uuid;
     private boolean finished;
 }

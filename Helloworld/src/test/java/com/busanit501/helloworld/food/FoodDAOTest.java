@@ -2,7 +2,9 @@ package com.busanit501.helloworld.food;
 
 import com.busanit501.helloworld.food.dao.FoodDAO;
 import com.busanit501.helloworld.food.vo.FoodVO;
+import com.busanit501.helloworld.jdbcex.vo.MemberVO;
 import com.busanit501.helloworld.jdbcex.vo.TodoVO;
+import jdk.javadoc.internal.doclets.formats.html.markup.HtmlStyle;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -10,6 +12,7 @@ import org.junit.jupiter.api.Test;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.UUID;
 
 @Log4j2
 public class FoodDAOTest {
@@ -69,6 +72,47 @@ public class FoodDAOTest {
     public void deleteTest() throws SQLException {
         Long fno = 3L;
         foodDAO.deleteFood(fno);
+    }
+
+    @Test
+    public void getFoodWithFno() throws SQLException {
+        Long fno = 1L;
+        String title = "swh";
+        LocalDate dueDate = LocalDate.now();
+        String uuid = UUID.randomUUID().toString();
+        Boolean finished = false;
+
+        // foodDAO.getFoodWithFno() 호출
+        FoodVO foodVO = foodDAO.getFoodWithFno(fno, title, dueDate, uuid, finished);
+
+        // 조회된 foodVO를 로그에 출력
+        log.info("foodVO 조회 확인: " + foodVO);
+    }
+
+    //로그인시, 유저의 uuid 업데이트 하기.
+    @Test
+    public void updateUuidTest() throws SQLException {
+        Long fno = 1L;
+        String title = "swh";
+        LocalDate dueDate = LocalDate.now();
+        String uuid = UUID.randomUUID().toString();
+        Boolean finished = false;
+
+        log.info("uuid 랜덤 문자열 샘플 : " + uuid);
+
+        foodDAO.updateUuid(fno, title, dueDate, uuid, finished);
+    }
+
+
+    //uuid 로 유저 검색
+    @Test
+    public void getFoodWithUuide() throws SQLException {
+
+        // 각자 테이블의 유저의uuid를 직접 복사해서 붙여넣기.
+        // 각각 전부 다 달라요.
+        FoodVO foodVO = foodDAO.getFoodWithUuid("8debfc50-226c-4f25-a648-3e791aa80cb7");
+        log.info("foodVO : " + foodVO);
+
     }
 
 }

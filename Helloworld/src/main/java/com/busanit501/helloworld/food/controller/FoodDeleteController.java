@@ -22,13 +22,13 @@ public class FoodDeleteController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Long fno = Long.valueOf(request.getParameter("fno"));
         //
-        log.info("doPost TodoDeleteController 확인");
+        log.info("doPost FoodDeleteController 확인");
         try {
            foodService.delete(fno);
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        response.sendRedirect("/food/list");
+        response.sendRedirect("/food/list2");
     }
 }

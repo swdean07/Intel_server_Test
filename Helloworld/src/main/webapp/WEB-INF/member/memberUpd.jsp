@@ -12,9 +12,9 @@
 </head>
 <body>
 <h1>member 작업 중. mno 번호로 수정화면 역할. </h1>
-<form action="/member/update?mno=${dto.mno}" method="post">
+<form action="/member/update?tno=${dto.tno}" method="post">
     <div>
-        <input type="text" name="mno" value="${dto.mno}" readonly>
+        <input type="text" name="tno" value="${dto.tno}" readonly>
     </div>
     <div>
         <input type="text" name="title" value="${dto.title}" placeholder="제목 입력 해주세요." >
@@ -32,10 +32,10 @@
     </div>
 </form>
 
-<form action="/member/delete?mno=${dto.mno}" method="post">
+<form action="/todo/delete?mno=${dto.tno}" method="post">
     <button type="submit">삭제하기</button>
 </form>
-<a href="/member/list">목록가기</a>
+<a href="/todo/list">목록가기</a>
 </body>
 </html>
 
