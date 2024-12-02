@@ -14,7 +14,7 @@ public class SampleController1 {
     // 맵핑, 메서드명과 동일한 뷰 파일로 연결.
     // /WEB-INF/views/
     //  hello(메서드명)
-     // .jsp
+    // .jsp
     public void food() {
         // 아직 화면이 없어서, 임의로 만들기.
         log.info("food");
@@ -23,7 +23,7 @@ public class SampleController1 {
     @GetMapping("/food2")
     // 만약에 리턴 타입이 문자열이면, 해당 문자열의 이름이
     // 뷰의 파일명으로 , 뷰를 맵핑, 할당.
-      public String food2() {
+    public String food2() {
         // 아직 화면이 없어서, 임의로 만들기.
         log.info("food2");
         return "foodTest";

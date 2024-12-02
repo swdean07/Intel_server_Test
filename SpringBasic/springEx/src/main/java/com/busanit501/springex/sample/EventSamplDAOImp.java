@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 //@Primary // 주 클래스로 이용하겠다. 시스템에게 알려줌.
 @Qualifier("event")
-public class EventSamplDAOImp implements SampleDAO{
+public class EventSamplDAOImp implements SampleDAO {
 
 }
