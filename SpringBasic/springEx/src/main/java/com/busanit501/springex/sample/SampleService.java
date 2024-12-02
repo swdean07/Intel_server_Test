@@ -1,9 +1,8 @@
-package com.busanit501.springex.sample.sample;
+package com.busanit501.springex.sample;
 
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 // 컨트롤러 역할 , @Controller
@@ -13,6 +12,7 @@ import org.springframework.stereotype.Service;
 @ToString
 @RequiredArgsConstructor // 생성자 주입 방식의 2번째, 롬복 이용
 public class SampleService {
+    // 이용하는 클래스, SampleDAO에 의존하는 클래스,
 
     // 방법1, 필드 주입 방식
     //    @Autowired
@@ -29,6 +29,9 @@ public class SampleService {
 
     //2) 롬복 애너테이션 이용
     // 클래스 상단에 , 애너테이션 @RequiredArgsConstructor 붙이면 됨.
+    // SampleDAO -> 타입: 인터페이스, sampleDAO,
+    // 구현한 클래스 2개가 시스템 상에 등록이 되었다.
+    @Qualifier("event")
     private final SampleDAO sampleDAO;
 
 

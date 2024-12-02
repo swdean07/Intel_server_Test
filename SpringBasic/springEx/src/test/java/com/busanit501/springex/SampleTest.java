@@ -1,6 +1,6 @@
-package com.busanit501.springex.sample;
+package com.busanit501.springex;
 
-import com.busanit501.springex.sample.sample.SampleService;
+import com.busanit501.springex.sample.SampleService;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
