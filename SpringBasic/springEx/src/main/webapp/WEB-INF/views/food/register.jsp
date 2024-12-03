@@ -1,4 +1,5 @@
 <!doctype html>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -55,9 +56,35 @@
                         Featured
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <%--                        Todo 입력 폼 여기에 작성--%>
+                        <form action="/todo/register" method="post">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Title</span>
+                                <input type="text" name="title" class="form-control" placeholder="제목 입력해주세요">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">DueDate</span>
+                                <input type="date" name="dueDate" class="form-control">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Writer</span>
+                                <input type="text" name="writer" class="form-control" placeholder="작성자 입력해주세요">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Finished</span>
+                                <input type="checkbox" name="finished" class="form-control">
+                            </div>
+                            <div class="my-4">
+                                <div class="float-end">
+                                    <button type="submit" class="btn btn-primary">글작성</button>
+                                    <button type="reset" class="btn btn-secondary">초기화</button>
+                                </div>
+                            </div>
+                        </form>
+                        <%--                        Todo 입력 폼 여기에 작성--%>
+
                     </div>
                 </div>
                 <!--        카드 끝 부분-->

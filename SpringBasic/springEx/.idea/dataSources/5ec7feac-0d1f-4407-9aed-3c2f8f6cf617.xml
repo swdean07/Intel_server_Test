@@ -1330,7 +1330,7 @@
     </schema>
     <schema id="514" parent="1" name="webdb">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-12-02.11:02:56</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-12-03.04:47:48</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_uca1400_ai_ci</CollationName>
     </schema>
     <user id="515" parent="1" name="healthcheck">
@@ -1350,70 +1350,109 @@
       <Host>localhost</Host>
     </user>
     <user id="521" parent="1" name="webuser"/>
-    <table id="522" parent="514" name="tbl_member">
+    <table id="522" parent="514" name="tbl_food">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_uca1400_ai_ci</CollationName>
     </table>
-    <table id="523" parent="514" name="tbl_todo">
+    <table id="523" parent="514" name="tbl_member">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_uca1400_ai_ci</CollationName>
     </table>
-    <column id="524" parent="522" name="mid">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="525" parent="522" name="mpw">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <column id="526" parent="522" name="mname">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="527" parent="522" name="uuid">
-      <Position>4</Position>
-      <StoredType>varchar(50)|0s</StoredType>
-    </column>
-    <index id="528" parent="522" name="PRIMARY">
-      <ColNames>mid</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="529" parent="522" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="530" parent="523" name="tno">
-      <AutoIncrement>17</AutoIncrement>
+    <table id="524" parent="514" name="tbl_todo">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_uca1400_ai_ci</CollationName>
+    </table>
+    <column id="525" parent="522" name="fno">
+      <AutoIncrement>29</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="531" parent="523" name="title">
+    <column id="526" parent="522" name="title">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <column id="532" parent="523" name="dueDate">
+    <column id="527" parent="522" name="dueDate">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <column id="533" parent="523" name="finished">
+    <column id="528" parent="522" name="finished">
       <DefaultExpression>0</DefaultExpression>
       <Position>4</Position>
       <StoredType>tinyint(4)|0s</StoredType>
     </column>
-    <index id="534" parent="523" name="PRIMARY">
+    <column id="529" parent="522" name="uuid">
+      <Position>5</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <index id="530" parent="522" name="PRIMARY">
+      <ColNames>fno</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="531" parent="522" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="532" parent="523" name="mid">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="533" parent="523" name="mpw">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="534" parent="523" name="mname">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="535" parent="523" name="uuid">
+      <Position>4</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <index id="536" parent="523" name="PRIMARY">
+      <ColNames>mid</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="537" parent="523" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="538" parent="524" name="tno">
+      <AutoIncrement>28</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="539" parent="524" name="title">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="540" parent="524" name="dueDate">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>date|0s</StoredType>
+    </column>
+    <column id="541" parent="524" name="finished">
+      <DefaultExpression>0</DefaultExpression>
+      <Position>4</Position>
+      <StoredType>tinyint(4)|0s</StoredType>
+    </column>
+    <index id="542" parent="524" name="PRIMARY">
       <ColNames>tno</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="535" parent="523" name="PRIMARY">
+    <key id="543" parent="524" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
