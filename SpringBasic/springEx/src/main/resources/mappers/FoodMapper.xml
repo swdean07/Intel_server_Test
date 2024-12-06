@@ -7,4 +7,39 @@
     <select id="getTime" resultType="string">
         select now()
     </select>
+
+    <!--    #{title} -> FoodVO, getTitle 로 접근하는 것과 동일한 효과-->
+    <insert id="insert">
+        insert into tbl_food (title, dueDate, writer)
+        values (#{title}, #{dueDate}, #{writer})
+    </insert>
+
+    <!--    여러개 행 조회, 각행의 요소, FoodVO , -->
+    <select id="selectAll" resultType="com.busanit501.springex.domain.FoodVO">
+        select * from tbl_food order by fno desc
+    </select>
+
+    <select id="selectOne" resultType="com.busanit501.springex.domain.FoodVO">
+        select * from tbl_food where fno = #{fno}
+    </select>
+
+    <delete id="delete">
+        delete from tbl_food where fno = #{fno}
+    </delete>
+
+    <update id="update">
+        update tbl_food set title = #{title}, dueDate = #{dueDate}, finished = #{finished}
+        where fno = #{fno}
+    </update>
+
+    <!--    페이징 처리해서, 전체 조회-->
+    <!--    #{skip} -> 동작을 getSkip() -->
+    <select id="selectList" resultType="com.busanit501.springex.domain.FoodVO">
+        select * from tbl_food order by fno desc limit #{skip}, #{size}
+    </select>
+
+    <select id="getCount" resultType="int">
+        select count(fno) from tbl_food
+    </select>
+
 </mapper>

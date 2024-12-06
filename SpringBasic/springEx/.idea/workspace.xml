@@ -1,9 +1,570 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectId" id="2perA9VuHQ4FhjYOGCsTiMW2jJ4" />
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;C:/busanit501_server_test&quot;
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4e7b4665-49a8-4db4-b34d-036f6583c2ca" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/busanit501/springex/controller/formatter/CheckboxFormatter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/busanit501/springex/dto/PageRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/busanit501/springex/dto/PageResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/food/read.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/food/update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/Server501_Test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/busanit501_server_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/.idea/git_toolbox_blame.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/logs/error.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/IndexController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/MyServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/calc/CalcInputController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/calc/CalcResultController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/food/controller/FoodDeleteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/food/controller/FoodListController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/food/controller/FoodReadController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/food/controller/FoodRegController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/food/controller/FoodUpdateController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/food/controller/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/food/controller/LogoutController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/food/dao/ConnectionUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/food/dao/FoodDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/food/dto/FoodDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/food/filter/LoginFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/food/filter/UTF8Filter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/food/service/FoodService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/food/service/FoodService_noDB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/food/util/MapperUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/food/vo/FoodVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/jdbcex/controller/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/jdbcex/controller/LogoutController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/jdbcex/controller/TodoDeleteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/jdbcex/controller/TodoList2Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/jdbcex/controller/TodoRead2Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/jdbcex/controller/TodoReg2Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/jdbcex/controller/TodoUpdateController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/jdbcex/dao/ConnectionUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/jdbcex/dao/MemberDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/jdbcex/dao/TodoDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/jdbcex/dto/MemberDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/jdbcex/dto/TodoDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/jdbcex/filter/LoginFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/jdbcex/filter/UTF8Filter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/jdbcex/service/MemberService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/jdbcex/service/TodoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/jdbcex/util/MapperUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/jdbcex/vo/MemberVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/jdbcex/vo/TodoVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/login/LoginInputController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/login/LoginResultController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/member/controller/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/member/controller/LogoutController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/member/controller/MemberDeleteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/member/controller/MemberListController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/member/controller/MemberReadController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/member/controller/MemberRegController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/member/controller/MemberUpdateController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/member/dao/ConnectionUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/member/dao/MemberDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/member/dto/MemberDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/member/filter/LoginFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/member/filter/UTF8Filter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/member/service/MemberService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/member/util/MapperUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/member/vo/MemberVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/todo/controller/TodoListController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/todo/controller/TodoReadController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/todo/controller/TodoRegController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/todo/dto/TodoDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/java/com/busanit501/helloworld/todo/service/TodoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/resources/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/webapp/WEB-INF/calc/calc_input.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/webapp/WEB-INF/calc/calc_result.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/webapp/WEB-INF/food/foodList.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/webapp/WEB-INF/food/foodRead.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/webapp/WEB-INF/food/foodReg.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/webapp/WEB-INF/food/foodUpd.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/webapp/WEB-INF/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/webapp/WEB-INF/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/webapp/WEB-INF/login/login_input.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/webapp/WEB-INF/login/login_result.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/webapp/WEB-INF/member/memberList.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/webapp/WEB-INF/member/memberRead.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/webapp/WEB-INF/member/memberReg.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/webapp/WEB-INF/member/memberUpd.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/webapp/WEB-INF/todo/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/webapp/WEB-INF/todo/todoList.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/webapp/WEB-INF/todo/todoList2.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/webapp/WEB-INF/todo/todoRead.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/webapp/WEB-INF/todo/todoRead2.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/webapp/WEB-INF/todo/todoReg.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/webapp/WEB-INF/todo/todoReg2.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/webapp/WEB-INF/todo/todoUpd.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/main/webapp/test.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/meme_jdbc설정.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/memo_DTO.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/memo_EL표기법.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/memo_JSTL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/memo_Log4j2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/memo_PRG 패턴.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/memo_db스크립트샘플.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/memo_enum기본 설명.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/memo_lombok.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/memo_req_res_메서드소개.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/memo_간단한게시판구조_jsp_디비연결전.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/memo_디비_커넥션풀.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/memo_서비스계층.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/memo_세션,쿠키,필터,리스너.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/test/java/com/busanit501/helloworld/dao/ConnectTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/test/java/com/busanit501/helloworld/food/FoodDAOTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/test/java/com/busanit501/helloworld/food/FoodServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/test/java/com/busanit501/helloworld/jdbcex/ConnectionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/test/java/com/busanit501/helloworld/jdbcex/TodoDAOTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/test/java/com/busanit501/helloworld/jdbcex/TodoServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/test/java/com/busanit501/helloworld/jdbcex/VoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/test/java/com/busanit501/helloworld/member/MemberDAOTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld/src/test/java/com/busanit501/helloworld/member/MemberServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld2/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld2/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld2/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld2/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld2/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld2/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld2/src/main/java/com/busanit501/helloworld2/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld2/src/main/java/com/busanit501/helloworld2/HelloServlet2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld2/src/main/java/com/busanit501/helloworld2/HelloServlet3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld2/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Helloworld2/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/SpringBasic.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5ec7feac-0d1f-4407-9aed-3c2f8f6cf617.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5ec7feac-0d1f-4407-9aed-3c2f8f6cf617/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5ec7feac-0d1f-4407-9aed-3c2f8f6cf617/storage_v2/_src_/schema/webdb.0lK8Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/busanit501/springex/config/ModelConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/busanit501/springex/config/ModelConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/busanit501/springex/controller/FoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/busanit501/springex/controller/FoodController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/busanit501/springex/controller/SampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/busanit501/springex/controller/SampleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/busanit501/springex/domain/TodoVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/busanit501/springex/dto/FoodDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/busanit501/springex/dto/FoodDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/busanit501/springex/mapper/FoodMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/busanit501/springex/mapper/FoodMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/busanit501/springex/mapper/TodoMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/busanit501/springex/service/FoodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/busanit501/springex/service/FoodService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/busanit501/springex/service/FoodServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/busanit501/springex/service/FoodServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/FoodMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/FoodMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/TodoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/root-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/root-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/servlet-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/food/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/food/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/food/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/food/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/todo/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/todo/register.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/busanit501/springex/mapper/FoodMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/busanit501/springex/mapper/FoodMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/busanit501/springex/mapper/TodoMapperTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/busanit501/springex/service/FoodServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/busanit501/springex/service/FoodServiceTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SpringEx" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SpringEx" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SpringEx" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;swdean07&quot;
   }
 }</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/swdean07/Intellij_Test.git&quot;,
+    &quot;accountId&quot;: &quot;0d1c239e-afe6-4894-9ef9-de43be813d9b&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2perA9VuHQ4FhjYOGCsTiMW2jJ4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.FoodMapperTest.executor": "Run",
+    "Gradle.FoodMapperTest.testDelete.executor": "Run",
+    "Gradle.FoodMapperTest.testGetCount.executor": "Run",
+    "Gradle.FoodMapperTest.testGetTime.executor": "Run",
+    "Gradle.FoodMapperTest.testInsert.executor": "Run",
+    "Gradle.FoodMapperTest.testSelectAll.executor": "Run",
+    "Gradle.FoodMapperTest.testSelectAllWithPage.executor": "Run",
+    "Gradle.FoodMapperTest.testSelectOne.executor": "Run",
+    "Gradle.FoodMapperTest.testUpdate.executor": "Run",
+    "Gradle.FoodServiceTest.testGetAll.executor": "Run",
+    "Gradle.FoodServiceTest.testGetOne.executor": "Run",
+    "Gradle.FoodServiceTest.testPageList.executor": "Run",
+    "Gradle.FoodServiceTest.testRegister.executor": "Run",
+    "Gradle.FoodServiceTest.testUpdate.executor": "Run",
+    "Gradle.springEx [build].executor": "Run",
+    "Gradle.springEx [clean].executor": "Run",
+    "Gradle.springEx 빌드.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Tomcat 서버.Tomcat 서버.executor": "Run",
+    "Tomcat 서버.이름이 지정되지 않았습니다.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Intellij_Test/SpringBasic2/SpringBasic/springEx/src/main/webapp/WEB-INF/views/food",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.import",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Intellij_Test\SpringBasic2\SpringBasic\springEx\src\main\webapp\WEB-INF\views\food" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Intellij_Test\SpringBasic2\SpringBasic\springEx\src\main\webapp\WEB-INF\views" />
+      <recent name="D:\Intellij_Test\SpringBasic2\SpringBasic\springEx\src\main\webapp\WEB-INF\views\food" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.busanit501.springex.dto" />
+      <recent name="com.busanit501.springex.controller.formatter" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.FoodServiceTest.testRegister">
+    <configuration name="FoodMapperTest.testGetCount" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.busanit501.springex.mapper.FoodMapperTest.testGetCount&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="FoodMapperTest.testInsert" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.busanit501.springex.mapper.FoodMapperTest.testInsert&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="FoodServiceTest.testGetAll" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.busanit501.springex.service.FoodServiceTest.testGetAll&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="FoodServiceTest.testPageList" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.busanit501.springex.service.FoodServiceTest.testPageList&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="FoodServiceTest.testRegister" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.busanit501.springex.service.FoodServiceTest.testRegister&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tomcat 서버" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.97" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="Gradle : com.busanit501 : SpringEx-1.0-SNAPSHOT.war (exploded)">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="02249220-9f5c-49fe-8858-4576fad9ff4f" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="49502" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : com.busanit501 : SpringEx-1.0-SNAPSHOT.war (exploded)" />
+        </option>
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.FoodServiceTest.testRegister" />
+        <item itemvalue="Gradle.FoodMapperTest.testInsert" />
+        <item itemvalue="Gradle.FoodServiceTest.testPageList" />
+        <item itemvalue="Gradle.FoodServiceTest.testGetAll" />
+        <item itemvalue="Gradle.FoodMapperTest.testGetCount" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="4e7b4665-49a8-4db4-b34d-036f6583c2ca" name="변경" comment="" />
+      <created>1733273814999</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733273814999</updated>
+      <workItem from="1733273817554" duration="16092000" />
+      <workItem from="1733295916451" duration="2237000" />
+      <workItem from="1733356278905" duration="15286000" />
+      <workItem from="1733443036824" duration="13325000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
 </project>
