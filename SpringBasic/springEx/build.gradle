@@ -60,14 +60,16 @@ dependencies {
 
   //6
   // logging 라이브러리,Log4j2,
-  // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
-  implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '3.0.0-beta2'
+  // 서블릿 옛날 버전을 사용해서, 버전 충돌 발생 3.0.0-beta -> 2.19.0
+  // 이슈가 많지만, 정상 동작 확인.
+  implementation 'org.apache.logging.log4j:log4j-core:2.19.0'
+  implementation 'org.apache.logging.log4j:log4j-api:2.19.0'
+  implementation 'org.apache.logging.log4j:log4j-slf4j2-impl:2.19.0'
 
-  // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api
-  implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '3.0.0-beta2'
+
 
 // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl
-  testImplementation group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '3.0.0-beta2'
+  testImplementation group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.19.0'
 
   // 7 spring core
   implementation group: 'org.springframework', name: 'spring-core', version: '5.3.19'
@@ -95,6 +97,12 @@ dependencies {
   // 현재 작업하는 버전, 3.0.4, 클래스 경로 변경,
   // 다운그레이드, -> 2.0.7
   implementation group: 'org.mybatis', name: 'mybatis-spring', version: '2.0.7'
+
+  //13
+  // 서버 입장에서 입력된 데이터 유효성 검증 도구
+  // https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator
+  implementation group: 'org.hibernate.validator', name: 'hibernate-validator', version: '6.2.1.Final'
+
 
 
 

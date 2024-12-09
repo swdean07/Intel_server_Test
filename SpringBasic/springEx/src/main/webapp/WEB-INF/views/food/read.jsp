@@ -57,33 +57,42 @@
                         Featured
                     </div>
                     <div class="card-body">
-                        <%--                        Food 입력 폼 여기에 작성--%>
-                        <form action="/food/register" method="post">
-                            <div class="input-group mb-3">
-                                <span class="input-group-text">Title</span>
-                                <input type="text" name="title" class="form-control" placeholder="제목 입력해주세요">
-                            </div>
+                        <%--                        Todo 입력 폼 여기에 작성--%>
+                        <%--                        <form action="/todo/register" method="post">--%>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Fno</span>
+                            <input type="text" name="tno" class="form-control" readonly
+                                   value=<c:out value="${foodDTO.fno}"></c:out> >
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Title</span>
+                            <input type="text" name="title" class="form-control" readonly
+                                   value='<c:out value="${foodDTO.title}"></c:out>'>
+                        </div>
 
-                            <div class="input-group mb-3">
-                                <span class="input-group-text">DueDate</span>
-                                <input type="date" name="dueDate" class="form-control">
-                            </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">DueDate</span>
+                            <input type="date" name="dueDate" class="form-control" readonly
+                                   value=<c:out value="${foodDTO.dueDate}"></c:out>>
+                        </div>
 
-                            <div class="input-group mb-3">
-                                <span class="input-group-text">Writer</span>
-                                <input type="text" name="writer" class="form-control" placeholder="작성자 입력해주세요">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Writer</span>
+                            <input type="text" name="writer" class="form-control" readonly
+                                   value=<c:out value="${foodDTO.writer}"></c:out>>
+                        </div>
+                        <div class="input-group mb-3">
+                            <label class="form-check-label">Finished &nbsp</label>
+                            <input type="checkbox" name="finished" class="form-check-input" readonly
+                            ${foodDTO.finished ? "checked" : ""}>
+                        </div>
+                        <div class="my-4">
+                            <div class="float-end">
+                                <button type="button" class="btn btn-primary">수정하기</button>
+                                <button type="button" class="btn btn-secondary">목록가기</button>
                             </div>
-                            <div class="input-group mb-3">
-                                <span class="form-check-label">Finished</span>
-                                <input type="checkbox" name="finished" class="form-check-input">
-                            </div>
-                            <div class="my-4">
-                                <div class="float-end">
-                                    <button type="submit" class="btn btn-primary">글작성</button>
-                                    <button type="reset" class="btn btn-secondary">초기화</button>
-                                </div>
-                            </div>
-                        </form>
+                        </div>
+                        <%--                        </form>--%>
                         <%--                        Food 입력 폼 여기에 작성--%>
 
                     </div>
@@ -94,9 +103,9 @@
         </div>
         <!--        class="row content"-->
     </div>
-<%--    <div class="row content">--%>
-<%--        <h1>Content</h1>--%>
-<%--    </div>--%>
+    <%--    <div class="row content">--%>
+    <%--        <h1>Content</h1>--%>
+    <%--    </div>--%>
     <div class="row footer">
         <!--        <h1>Footer</h1>-->
         <div class="row fixed-bottom" style="z-index: -100">
@@ -116,6 +125,22 @@
     serverValidResult['${error.getField()}'] = '${error.defaultMessage}'
     </c:forEach>
     console.log(serverValidResult)
+</script>
+
+<%--목록가기 및 수정폼 가기 이벤트 리스너--%>
+<script>
+    // 수정폼
+    document.querySelector(".btn-primary").addEventListener("click",
+        function (e){
+            // 수정폼으로 가야함. 그러면, 필요한 준비물 tno 번호가 필요함
+            self.location = `/food/update?fno=${foodDTO.fno}&${pageRequestDTO.link}`
+                ,false})
+    // 목록
+    document.querySelector(".btn-secondary").addEventListener("click",
+        function (e){
+            // 수정폼으로 가야함. 그러면, 필요한 준비물 tno 번호가 필요함
+            self.location = "/food/list?${pageRequestDTO.link}"
+                ,false})
 </script>
 
 

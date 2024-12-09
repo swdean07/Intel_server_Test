@@ -5,7 +5,7 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/Helloworld" />
-        <option name="gradleJvm" value="corretto-17" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/Helloworld" />
@@ -13,11 +13,11 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/Helloworld2" />
-        <option name="gradleJvm" value="corretto-17" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/SpringBasic/springEx" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/Helloworld2" />
+            <option value="$PROJECT_DIR$/SpringBasic/springEx" />
           </set>
         </option>
       </GradleProjectSettings>
