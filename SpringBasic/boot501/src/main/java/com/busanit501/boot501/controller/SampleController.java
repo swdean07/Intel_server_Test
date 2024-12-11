@@ -12,22 +12,15 @@ import java.util.List;
 @Log4j2
 public class SampleController {
 
-    @GetMapping("/hello")
-    // 레거시에서 앞단 화면을 jsp 사용했고,
-    // 부트에서 앞단 화면을 타임리프 사용. 확장자, .html 동일함.
-    public void hello(Model model) {
-        // 레거시, 뷰 설정, xml 등록,
-        // WEB-INF/Views/todo prefix
-        // .jsp , suffix
-        // 기본 : templates/hello.html
-
-        model.addAttribute("msg", "hello world");
-    }
-
-    @GetMapping("/ex/ex1")
-    public void ex1(Model model) {
-        List<String> list = Arrays.asList("a", "b", "c");
+    @GetMapping("/todo/list")
+    public void list(Model model) {
+        List<String> list = Arrays.asList("리스트");
         model.addAttribute("list", list);
     }
 
+    @GetMapping("/todo/register")
+    public void register(Model model) {
+        List<String> register = Arrays.asList("레지스터");
+        model.addAttribute("register", register);
+    }
 }
