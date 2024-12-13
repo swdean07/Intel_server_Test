@@ -17,7 +17,7 @@ public interface FoodRepository extends JpaRepository<Food, Long> , FoodSearch {
     // 하지만, 우리는 기본 탑재된 쿼리 메소드를 활용할 예정.
 
     //쿼리스트링 ,방법1
-    Page<Food> findByTitleContainingOrderByBnoDesc(String title, Pageable pageable);
+    Page<Food> findByTitleContainingOrderByFnoDesc(String title, Pageable pageable);
 
     //@Query , 방법2 전달. JPQL 문법으로, 작성하고,
     // 모든 디비(마리아다비, 오라클, 마이SQL, PostGre 관계형 디비)에 적용이 됨.
@@ -25,8 +25,8 @@ public interface FoodRepository extends JpaRepository<Food, Long> , FoodSearch {
     Page<Food> findByKeyword(String keyword, Pageable pageable);
 
     // Querydsl  도구 이용해서, 방법3,
-    // BoardSearch 인터페이스 구현하고, 이 인터페이스를 구현한 클래스에서 문법 사용.
-    // BoardSearchImpl 구현한 클래스의 이름. 구현체,
+    // FoodSearch 인터페이스 구현하고, 이 인터페이스를 구현한 클래스에서 문법 사용.
+    // FoodSearchImpl 구현한 클래스의 이름. 구현체,
 
     // 방법2,에서 JPQL, 디비에 상관없이 작성도 되지만,
     // 반대로, 특정 디비의 문법으로 만 작성도 가능.

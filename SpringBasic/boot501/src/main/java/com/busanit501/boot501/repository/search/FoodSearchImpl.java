@@ -36,13 +36,13 @@ public class FoodSearchImpl extends QuerydslRepositorySupport
         //select * from food 작성한 내용을 query 객체 형식으로 만듦.
         // 다양한 쿼리 조건을 이용할수 있음.
         // 예, where, groupby, join , pagination
-        query.where(food.title.contains("3"));
+        query.where(food.title.contains("2"));
         // =================================.,조건1
 
         // 제목, 작성자 검색 조건 추가,
         BooleanBuilder booleanBuilder = new BooleanBuilder();
-        booleanBuilder.or(food.title.contains("3"));// "3" 제목 임시
-        booleanBuilder.or(food.content.contains("7"));// "3" 제목 임시
+        booleanBuilder.or(food.title.contains("2"));// "2" 제목 임시
+        booleanBuilder.or(food.content.contains("9"));// "9" 제목 임시
         // query, 해당 조건을 적용함.
         query.where(booleanBuilder);
         // 방법2, 추가 조건으로, fno 가 0보다 초과 하는 조건.
@@ -76,10 +76,13 @@ public class FoodSearchImpl extends QuerydslRepositorySupport
                 switch (type) {
                     case "t":
                         booleanBuilder.or(food.title.contains(keyword));
+                        break;
                     case "c":
                         booleanBuilder.or(food.content.contains(keyword));
+                        break;
                     case "w":
                         booleanBuilder.or(food.writer.contains(keyword));
+                        break;
                 } // switch
             }// end for
             // where 조건을 적용해보기.

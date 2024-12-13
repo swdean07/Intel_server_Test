@@ -109,9 +109,9 @@ public class FoodRepositoryTests {
     // 방법1 , 쿼리스트링
     @Test
     public void testQueryString() {
-        Pageable pageable = PageRequest.of(1, 10,
+        Pageable pageable = PageRequest.of(2, 10,
                 Sort.by("fno").descending());
-        Page<Food> result = foodRepository.findByTitleContainingOrderByBnoDesc(
+        Page<Food> result = foodRepository.findByTitleContainingOrderByFnoDesc(
                 "2", pageable
         );
         log.info("result.getTotalElements()전체 갯수 :" + result.getTotalElements());
@@ -124,7 +124,7 @@ public class FoodRepositoryTests {
     // 방법2 , @Query
     @Test
     public void testQueryAnotation() {
-        Pageable pageable = PageRequest.of(1, 10,
+        Pageable pageable = PageRequest.of(2, 10,
                 Sort.by("fno").descending());
         Page<Food> result = foodRepository.findByKeyword("2", pageable);
 
@@ -140,7 +140,7 @@ public class FoodRepositoryTests {
     // 연습용
     @Test
     public void testQuerydsl() {
-        Pageable pageable = PageRequest.of(1, 10,
+        Pageable pageable = PageRequest.of(2, 10,
                 Sort.by("fno").descending());
 //        Page<Board> result = boardRepository.search(pageable);
         foodRepository.search(pageable);
@@ -154,7 +154,7 @@ public class FoodRepositoryTests {
 
     @Test
     public void testQuerydsl2() {
-        Pageable pageable = PageRequest.of(1, 10,
+        Pageable pageable = PageRequest.of(2, 10,
                 Sort.by("fno").descending());
 
         // 전달할 준비물
