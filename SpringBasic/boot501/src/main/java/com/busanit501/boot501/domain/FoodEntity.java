@@ -23,6 +23,6 @@ abstract class FoodEntity { // 유연하게 공통 작업시, 추상 클래스�
     private LocalDateTime regDate;
 
     @LastModifiedDate
-    @Column(name="modDate", updatable = false)
+    @Column(name="modDate", updatable = true)
     private LocalDateTime modDate;
 }

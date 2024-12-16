@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="www.thymeleaf.org"
+      layout:decorate="~{layout/base.html}"
+>
+<body>
+<div layout:fragment="content">
+
+    <div class="row mt-3">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    Food Register
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Food Register
+                    </h5>
+                    <form method="post" action="/food/register">
+                        <div class="mb-3">
+                            <label for="title" class="form-control">제목</label>
+                            <input type="text" class="form-control" id="title" name="title" placeholder="제목을 입력해주세요">
+                        </div>
+                        <div class="mb-3">
+                            <label for="content" class="form-control">내용</label>
+                            <textarea type="text" class="form-control col-sm-5" id="content"
+                                      name="content" rows="5" placeholder="내용을 입력해주세요"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="writer" class="form-control">작성자</label>
+                            <input type="text" class="form-control" id="writer" name="writer" placeholder="지금은 직접 작성자를 입력해주세요, 로그인 후 로그인 유저가 자동으로 탑재됨.">
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary submitBtn">작성</button>
+                            <button type="reset" class="btn btn-danger">초기화</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<!--끝 나는 부분 layout:fragment="content"-->
+
+
+<!--자바스크립트 추가하는 영역-->
+<script layout:fragment="javascript" th:inline="javascript">
+
+    // 유효성 체크 오류 발생시, alert 경고창 알려주기.
+    // 서버에서 오류가 발생시, 전달한 키 : errors , 받아서, 처리하기.
+    const errors = [[${errors}]]
+    console.log(errors)
+
+    let errorMsg = ''
+    if(errors) {
+        for(let i = 0; i <errors.length; i++) {
+            errorMsg += `${errors[i].field}는 ${errors[i].code} \n`
+        }
+        alert(errorMsg)
+    }
+
+</script>
+
+</body>
+</html>

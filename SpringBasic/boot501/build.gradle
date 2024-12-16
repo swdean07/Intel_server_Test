@@ -61,6 +61,13 @@ dependencies {
 
     // 5, DTO <-> VO(엔티티클래스) 변환기, 필요.
     implementation group: 'org.modelmapper', name: 'modelmapper', version: '3.2.1'
+
+    // 6
+    // 서버 입장에서 입력된 데이터 유효성 검증 도구
+    // https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator
+    // 레거시 버전의 유효성 도구인데, 동작 안해서, 버전 변경
+//    implementation group: 'org.hibernate.validator', name: 'hibernate-validator', version: '6.2.1.Final'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '3.4.0'
 }
 
 tasks.named('test') {

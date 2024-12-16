@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="www.thymeleaf.org"
+      layout:decorate="~{layout/base.html}"
+>
+<body>
+<div layout:fragment="content">
+
+    <div class="row mt-3">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    Food Read
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Food Read
+                    </h5>
+<!--                    <form method="post" action="/food/update">-->
+                        <div class="mb-3">
+                            <label for="title" class="form-control">제목</label>
+                            <input type="text" class="form-control" id="title" name="title" placeholder="제목을 입력해주세요"
+                             th:value="${dto.title}" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="content" class="form-control">내용</label>
+                            <textarea type="text" class="form-control col-sm-5" id="content"
+                                      name="content" rows="5" placeholder="내용을 입력해주세요"
+                                       readonly>[[${dto.content}]]</textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="writer" class="form-control">작성자</label>
+                            <input type="text" class="form-control" id="writer" name="writer" placeholder="지금은 직접 작성자를 입력해주세요, 로그인 후 로그인 유저가 자동으로 탑재됨."
+                                   th:value="${dto.writer}" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="regDate" class="form-control">등록시간</label>
+                            <input type="text" class="form-control" id="regDate" name="regDate"
+                                   th:value="${#temporals.format(dto.regDate,'yyyy-MM-dd HH:mm:ss')}" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="modDate" class="form-control">수정시간</label>
+                            <input type="text" class="form-control" id="modDate" name="modDate"
+                                   th:value="${#temporals.format(dto.modDate,'yyyy-MM-dd HH:mm:ss')}" readonly>
+                        </div>
+                        <div class="mb-3" th:with="link = ${pageRequestDTO.link}">
+<!--                            수정폼 가기 방법2-->
+<!--                            <a th:href="|@{/food/update}?fno=${dto.fno}&${link}|">-->
+                            <button type="button" class="btn btn-primary submitBtn">수정하기</button>
+<!--                            </a>-->
+                            <a th:href="|@{/food/list}?${link}|">
+                            <button type="button" class="btn btn-danger">목록가기</button>
+                            </a>
+                        </div>
+
+<!--                    </form>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<!--끝 나는 부분 layout:fragment="content"-->
+
+
+<!--자바스크립트 추가하는 영역-->
+<script layout:fragment="javascript" th:inline="javascript">
+
+   // 수정폼으로 이동하기.
+   document.querySelector(".submitBtn").addEventListener("click",
+       function (e) {
+           // 수정폼으로 가야함. 그러면, 필요한 준비물 fno 번호가 필요함
+           self.location = "/food/update?fno="+[[${dto.fno}]]+"&"+[[${pageRequestDTO.link}]]
+               ,false})
+
+</script>
+
+</body>
+</html>

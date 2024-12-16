@@ -154,12 +154,12 @@ public class FoodRepositoryTests {
 
     @Test
     public void testQuerydsl2() {
-        Pageable pageable = PageRequest.of(2, 10,
+        Pageable pageable = PageRequest.of(1, 10,
                 Sort.by("fno").descending());
 
         // 전달할 준비물
         // 1) 검색어, 2) 검색 유형
-        String keyword = "2";
+        String keyword = "샘플";
         String[] types = {"t","w","c"};
 
         Page<Food> result = foodRepository.searchAll(types,keyword,pageable);
