@@ -1,6 +1,7 @@
 package com.busanit501.boot501.controller;
 
 import com.busanit501.boot501.dto.FoodDTO;
+import com.busanit501.boot501.dto.FoodListReplyCountDTO;
 import com.busanit501.boot501.dto.PageRequestDTO;
 import com.busanit501.boot501.dto.PageResponseDTO;
 import com.busanit501.boot501.service.FoodService;
@@ -23,7 +24,8 @@ public class FoodController {
 
     @GetMapping("/list")
     public void list(PageRequestDTO pageRequestDTO, Model model ) {
-        PageResponseDTO<FoodDTO> responseDTO = foodService.list(pageRequestDTO);
+//        PageResponseDTO<FoodDTO> responseDTO = foodService.list(pageRequestDTO);
+        PageResponseDTO<FoodListReplyCountDTO> responseDTO = foodService.listWithReplyCount(pageRequestDTO);
         log.info("pageRequestDTO 의 getLink 조사 : " + pageRequestDTO.getLink());
         model.addAttribute("responseDTO", responseDTO);
     }

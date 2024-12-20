@@ -2,6 +2,7 @@ package com.busanit501.boot501.service;
 
 import com.busanit501.boot501.domain.Food;
 import com.busanit501.boot501.dto.FoodDTO;
+import com.busanit501.boot501.dto.FoodListReplyCountDTO;
 import com.busanit501.boot501.dto.PageRequestDTO;
 import com.busanit501.boot501.dto.PageResponseDTO;
 import com.busanit501.boot501.repository.FoodRepository;
@@ -79,5 +80,20 @@ public class FoodServiceImpl implements FoodService {
                 .build();
 
     } // list
+
+    @Override
+    public PageResponseDTO<FoodListReplyCountDTO> listWithReplyCount(PageRequestDTO pageRequestDTO) {
+
+        String[] types = pageRequestDTO.getTypes();
+        String keyword = pageRequestDTO.getKeyword();
+        Pageable pageable = pageRequestDTO.getPageable("fno");
+
+        Page<FoodListReplyCountDTO> result = foodRepository.searchWithReplyCount(types,keyword,pageable);
+        return PageResponseDTO.<FoodListReplyCountDTO>withAll()
+                .pageRequestDTO(pageRequestDTO)
+                .dtoList(result.getContent())
+                .total((int) result.getTotalElements())
+                .build();
+    }
 }
 

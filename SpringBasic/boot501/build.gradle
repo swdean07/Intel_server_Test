@@ -68,6 +68,15 @@ dependencies {
     // 레거시 버전의 유효성 도구인데, 동작 안해서, 버전 변경
 //    implementation group: 'org.hibernate.validator', name: 'hibernate-validator', version: '6.2.1.Final'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '3.4.0'
+
+    // https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui
+    implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version: '2.7.0'
+
+    // 8
+    // 원본 이미지 -> 작은 이미지 변환 도구,
+    // https://mvnrepository.com/artifact/net.coobird/thumbnailator
+    implementation group: 'net.coobird', name: 'thumbnailator', version: '0.4.20'
+
 }
 
 tasks.named('test') {

@@ -27,17 +27,17 @@ public class FoodRepositoryTests {
         // 더미 데이터, 앞에서, 병렬 처리 기능 사용하기.
         // stream 클래스 이용하기.
         // 1 ~ 99번까지 생성해요.
-        IntStream.range(1, 100).forEach(i -> {
+        IntStream.range(1,101).forEach(i -> {
             Food food = Food.builder()
-                    .title("푸드 제목 : " + i)
-                    .content("푸드 내용 : " + i)
-                    .writer("푸드 작성자 : swh "+i)
+                    .title("샘플 제목 : " + i)
+                    .content("샘플 내용 : " + i)
+                    .writer("샘플 작성자 : swh " + i)
                     .build();
             // crud, insert , save-> 1차 임시 테이블 저장 -> 실제 테이블 반영
             // save ->
             // 예시 sql,    insert
             //    into
-            //        board
+            //        food
             //        (content, mod_date, reg_date, title, writer)
             //    values
             //        (?, ?, ?, ?, ?)
